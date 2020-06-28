@@ -12,3 +12,7 @@
 # not in
 # res = "wq" not in "hello wq"
 # print(res)
+
+
+# 身份运算符
+# is判断的是id是否相等
