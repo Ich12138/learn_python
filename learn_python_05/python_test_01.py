@@ -44,5 +44,24 @@ list1 = [
 # print(list2)
 
 
+# 深拷贝
+# 对于不可变类型拷贝原来的地址
+# 对于可变类型，容器生成新的，里面的数据拷贝原容器里的数据地址
+import copy
 
+list1 = [
+    "asdad",
+    "leds",
+    [
+        "1",
+        2
+    ]
+]
+
+list3 = copy.deepcopy(list1)
+# print(id(list1))
+# print(id(list3))
+
+print(id(list1[0]), id(list1[1]), id(list1[2]))
+print(id(list3[0]), id(list3[1]), id(list3[2]))
 
