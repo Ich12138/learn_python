@@ -83,3 +83,27 @@
 #         break
 #     else:
 #         flag += 1
+
+# 8、猜年龄游戏
+#    需求：允许用户最多尝试3次
+#    每尝试3次后，询问用户是否继续猜，回答y或Y，就继续，回答n或N就退出
+#    猜对直接退出
+
+game_age1 = 20
+flag1 = 0
+flag2 = True
+while flag2:
+    input_age = int(input("请输入猜想的年龄: "))
+    if game_age1 == input_age:
+        print("恭喜回答正确!")
+        flag2 = False
+    else:
+        flag1 += 1
+        if flag1 == 3:
+            input_flag = input("是否继续？")
+            if input_flag == "y" or input_flag == "Y":
+                flag2 = True
+                flag1 = 0
+            elif input_flag == "n" or input_flag == "N":
+                flag2 = False
+                print("游戏退出")
