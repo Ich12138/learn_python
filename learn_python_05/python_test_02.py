@@ -40,22 +40,33 @@ while 条件:
 
 
 # 7、while循环的嵌套
-user_name = "wq"
-user_pwd = "123"
+# user_name = "wq"
+# user_pwd = "123"
+#
+# while True:
+#     input_name = input("请输入用户名: ")
+#     input_pwd = input("请输入密码: ")
+#     if input_name == user_name and input_pwd == user_pwd:
+#         print("登陆成功")
+#         while True:
+#             cmd = input("请输入指令: ")
+#             if cmd == "q":
+#                 break
+#             else:
+#                 print("命令{cmd}正在执行".format(cmd=cmd))
+#         break
+#     else:
+#         print("账户或者密码错误!")
 
-while True:
-    input_name = input("请输入用户名: ")
-    input_pwd = input("请输入密码: ")
-    if input_name == user_name and input_pwd == user_pwd:
-        print("登陆成功")
-        while True:
-            cmd = input("请输入指令: ")
-            if cmd == "q":
-                break
-            else:
-                print("命令{cmd}正在执行".format(cmd=cmd))
-        break
-    else:
-        print("账户或者密码错误!")
+# 8、while + continue
+# 强调在continue之后添加同级代码毫无意义
+
+# count = 0
+# while count < 6:
+#     if count % 2 == 0:
+#         count += 1
+#         continue
+#     print(count)
+#     count += 1
 
 
