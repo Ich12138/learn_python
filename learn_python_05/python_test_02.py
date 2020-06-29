@@ -52,7 +52,8 @@ while True:
             cmd = input("请输入指令: ")
             if cmd == "q":
                 break
-            print("命令{cmd}正在执行".format(cmd=cmd))
+            else:
+                print("命令{cmd}正在执行".format(cmd=cmd))
         break
     else:
         print("账户或者密码错误!")
