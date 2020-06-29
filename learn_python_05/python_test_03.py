@@ -24,3 +24,11 @@
 #     if count3 % 2 != 0:
 #         print(count3)
 #     count3 += 1
+
+
+# 3、输出1-100所有偶数
+# count3 = 1
+# while count3 <= 100:
+#     if count3 % 2 == 0:
+#         print(count3)
+#     count3 += 1
