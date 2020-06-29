@@ -35,15 +35,15 @@
 
 
 # 5、求1-2+3-4+5....99的结果
-# count5 = 1
-# key = 1
-# sum5 = 0
-# while key < 100:
-#     sum5 += count5
-#     count5 += 1
-#     count5 = count5 * -1
-#     key += 1
-# print(sum5)
+count5 = 1
+sum5 = 0
+while count5 < 100:
+    if count5 % 2 != 0:
+        sum5 += count5
+    else:
+        sum5 -= count5
+    count5 += 1
+print(sum5)
 
 
 # 6、用户登陆(三次机会)
@@ -89,21 +89,21 @@
 #    每尝试3次后，询问用户是否继续猜，回答y或Y，就继续，回答n或N就退出
 #    猜对直接退出
 
-game_age1 = 20
-flag1 = 0
-flag2 = True
-while flag2:
-    input_age = int(input("请输入猜想的年龄: "))
-    if game_age1 == input_age:
-        print("恭喜回答正确!")
-        flag2 = False
-    else:
-        flag1 += 1
-        if flag1 == 3:
-            input_flag = input("是否继续？")
-            if input_flag == "y" or input_flag == "Y":
-                flag2 = True
-                flag1 = 0
-            elif input_flag == "n" or input_flag == "N":
-                flag2 = False
-                print("游戏退出")
+# game_age1 = 20
+# flag1 = 0
+# flag2 = True
+# while flag2:
+#     input_age = int(input("请输入猜想的年龄: "))
+#     if game_age1 == input_age:
+#         print("恭喜回答正确!")
+#         flag2 = False
+#     else:
+#         flag1 += 1
+#         if flag1 == 3:
+#             input_flag = input("是否继续？")
+#             if input_flag == "y" or input_flag == "Y":
+#                 flag2 = True
+#                 flag1 = 0
+#             elif input_flag == "n" or input_flag == "N":
+#                 flag2 = False
+#                 print("游戏退出")
