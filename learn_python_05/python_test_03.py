@@ -26,9 +26,21 @@
 #     count3 += 1
 
 
-# 3、输出1-100所有偶数
+# 4、输出1-100所有偶数
 # count3 = 1
 # while count3 <= 100:
 #     if count3 % 2 == 0:
 #         print(count3)
 #     count3 += 1
+
+
+# 5、求1-2+3-4+5....99的结果
+# count5 = 1
+# key = 1
+# sum5 = 0
+# while key < 100:
+#     sum5 += count5
+#     count5 += 1
+#     count5 = count5 * -1
+#     key += 1
+# print(sum5)
