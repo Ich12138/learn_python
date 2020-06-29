@@ -68,3 +68,18 @@
 #         print("账户或或密码输入错误，你还有{opp}次机会".format(opp=opp))
 # else:
 #     print("三次输入错误，账户已被冻结，请联系人工进行处理！")
+
+
+# 7、猜年龄游戏
+#    需求：允许用户最多尝试3次，三次都不对，则直接退出，若正确则打印恭喜并退出
+# game_age = 18
+# flag = 0
+# while True:
+#     if flag == 3:
+#         break
+#     input_age = int(input("请输入猜想的年龄: "))
+#     if game_age == input_age:
+#         print("恭喜回答正确!")
+#         break
+#     else:
+#         flag += 1
