@@ -44,3 +44,27 @@
 #     count5 = count5 * -1
 #     key += 1
 # print(sum5)
+
+
+# 6、用户登陆(三次机会)
+# user_name = "wq"
+# user_pwd = "123"
+# count6 = 0
+# while count6 < 3:
+#     input_name = input("请输入用户名: ")
+#     input_pwd = input("请输入密码: ")
+#     if input_name == user_name and user_pwd == input_pwd:
+#         flag = True
+#         while flag:
+#             cmd = input("请输入指令(退出请输入q或者quit或者'退出'): ")
+#             if cmd == "q" or cmd == "quit" or cmd == "退出":
+#                 flag = False
+#             else:
+#                 print("指令{cmd}正在执行".format(cmd=cmd))
+#         break
+#     else:
+#         count6 += 1
+#         opp = 3 - count6
+#         print("账户或或密码输入错误，你还有{opp}次机会".format(opp=opp))
+# else:
+#     print("三次输入错误，账户已被冻结，请联系人工进行处理！")
