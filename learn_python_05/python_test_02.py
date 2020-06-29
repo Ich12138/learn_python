@@ -70,3 +70,8 @@ while 条件:
 #     count += 1
 
 
+# 9、while + else：针对break
+while True:
+    ...
+else:
+    print("else包含的代码会在while循环结束，并且while循环是在没有被break打断的情况下正常结束的，才会运行")
