@@ -58,8 +58,13 @@ for 变量名 in 可迭代对象: 可迭代对象可以是: 列表，字典，�
 
 
 # 补充  使用len函数和range函数一起for循环
-l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-for i in range(len(l)):
-    print(i)
+# l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+# for i in range(len(l)):
+#     print(i)
 
 
+# for + continue
+# for i in range(10):
+#     if i % 2 == 0:
+#         continue
+#     print(i)
