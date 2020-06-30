@@ -56,6 +56,16 @@
 
 
 # 5、移除字符串两端指定符号，但原来的字符串不会改变
-msg = "s=+/()       adsasd asdasdasd           =+/()s"
-res = msg.strip('s=+/() ')  # 函数默认去掉空格，可以传参数
+# msg = "s=+/()       adsasd asdasdasd           =+/()s"
+# res = msg.strip('s=+/() ')  # 函数默认去掉空格，可以传参数
+# print(res)
+
+
+# 6、切分 split() 把字符串按照某种分隔符进行切分 默认切分空格，返回list
+msg = "hello world asdasda"
+# res = msg.split(" ")
+# print(res)
+
+# 指定分割次数
+res = msg.split(" ", 1)
 print(res)
