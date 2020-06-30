@@ -43,3 +43,19 @@ for 变量名 in 可迭代对象: 可迭代对象可以是: 列表，字典，�
 
 # for x in range(9):
 #     print("asdasda",x)
+
+
+
+# for + break + else 同while一样
+
+# user_name = "wq"
+# user_pwd = "123"
+#
+# for x in range(3):
+#     input_name = input("请输入用户名: ")
+#     input_pwd = input("请输入密码: ")
+#     if input_name == user_name and input_pwd == user_pwd:
+#         print("登陆成功")
+#         break
+# else:
+#     print("输错账号或者密码次数过多")
