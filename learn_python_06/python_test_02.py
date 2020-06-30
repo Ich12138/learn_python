@@ -111,3 +111,95 @@
 # 判断字符串是否有纯数字组成
 # msg = "123.56"
 # print(msg.isdigit())
+
+
+# 8、了解
+# find、rfind、index、rindex、count
+msg = "hello wq hahahahaha"
+
+# 找到返回起始索引
+# print(msg.find("l"))  # 返回子字符串在原字符串左侧第一次出现的位置
+# print(msg.find("wq"))
+#
+#
+# print(msg.index("l"))
+# print(msg.index("wq"))
+
+
+# 找不到情况
+# print(msg.find("x"))  # 找不到返回-1
+
+# print(msg.index("x"))  # 找不到直接抛出异常
+
+
+# print(msg.count("ha"))  # 统计字符出现次数
+
+# center,ljust,rjust,zfill
+# 显示效果
+# print("wq".center(10, "-"))  # 效果: ----wq----
+# print("wq".ljust(10, "-"))  # 效果: wq--------
+# print("wq".rjust(10, "-"))  # 效果: --------wq
+# print("wq".zfill(10))  # 效果: 00000000wq
+
+
+# expandtabs
+# 制定制表符宽度
+# msg = "hello\tworld"
+# print(msg)                 # 效果： hello	world
+# print(msg.expandtabs(2))   # 效果： hello world
+# print(msg.expandtabs(10))  # 效果： hello     world
+
+
+# captalize 首字母大写
+# msg = "hello wq"
+# print(msg.capitalize())  # 效果: Hello wq
+
+
+# swapcase 大小写反转
+# msg = "HEllo wQ"
+# print(msg.swapcase())  # 效果: heLLO Wq
+
+
+# title 每个单词首字母大写，以空格为分隔符
+# msg = "hello wq"
+# print(msg.title())  # 效果: Hello Wq
+
+
+# 字符串里的is相关函数
+# print("abc".islower())  # 判断字符串是否全为小写
+# print("abc".isupper())  # 判度字符串是否全为大写
+# print("abc".istitle())  # 判断字符串里的每个单词是否为大写
+# print("abc".isalnum())  # 判断字符串是否只由字母或数字构成
+# print("abc".isalpha())  # 判断字符串是否只由字母组成
+# print("abc".isspace())  # 判断字符串是否只为空格
+# print("age_wq".isidentifier())  # 判断字符串命名是否规范，包括python自带的关键字
+# print("def".isidentifier())  # 判断字符串命名是否规范，包括python自带的关键字
+
+
+# 字符串的与数字有关的is函数
+num1 = b'4'  # bytes
+num2 = u'4'  # unicode,python3中无需加u就是unicode
+num3 = '四'  # 中文数字
+num4 = 'Ⅳ'  # 罗马数字
+
+# isdigt可识别：bytes,unicode
+print(num1.isdigit())  # True
+print(num2.isdigit())  # True
+print(num3.isdigit())  # False
+print(num4.isdigit())  # False
+
+# isdecimal只能识别: uncicode(bytes类型无isdecimal方法)
+# num2.isdecimal()  # True
+# num3.isdecimal()  # True
+# num4.isdecimal()  # True
+
+# isnumberic:可识别 unicode,中文数字,罗马数字(bytes类型无isnumberic方法)
+# num2.isnumeric()  # True
+# num3.isnumeric()  # True
+# num4.isnumeric()  # True
+
+# 三者不能判断浮点数
+# num5 = '4.3'
+# num5.isdigit()
+# num5.isdecimal()
+# num5.isnumeric()
