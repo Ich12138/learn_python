@@ -99,3 +99,15 @@
 # l1 = ['wq', '18:m']
 # res = ":".join(l1)  # 按照某个分隔符，把列表里的全部元素拼接成一个大字符串
 # print(res)
+
+
+# 6、repalce
+# msg = "you can you up no can no bb"
+# res = msg.replace("you", "YOU", 1)  # 最后一个参数是替换几次，默认全部替换
+# print(res)
+
+
+# 7、isdigit
+# 判断字符串是否有纯数字组成
+# msg = "123.56"
+# print(msg.isdigit())
