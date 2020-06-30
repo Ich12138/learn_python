@@ -33,9 +33,6 @@ for 变量名 in 可迭代对象: 可迭代对象可以是: 列表，字典，�
 #            for成为取值循环，循环次数取决于in后面包含值的个数
 
 
-
-
-
 # 利用for控制循环次数： 利用range() 函数
 # range(10)  # 自动生成0-9的列表
 # range(1, 9)  # 生成1-8的列表
@@ -43,7 +40,6 @@ for 变量名 in 可迭代对象: 可迭代对象可以是: 列表，字典，�
 
 # for x in range(9):
 #     print("asdasda",x)
-
 
 
 # for + break + else 同while一样
@@ -59,3 +55,11 @@ for 变量名 in 可迭代对象: 可迭代对象可以是: 列表，字典，�
 #         break
 # else:
 #     print("输错账号或者密码次数过多")
+
+
+# 补充  使用len函数和range函数一起for循环
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+for i in range(len(l)):
+    print(i)
+
+
