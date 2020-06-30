@@ -24,3 +24,14 @@
 # 使用
 # 暂无
 
+
+# 2、float
+# 定义
+# salary = 3.1
+# salary = float(3.1)
+
+# 类型转换
+a = float("3.1")
+
+# 使用
+# int与float没有需要掌握的内置方法
