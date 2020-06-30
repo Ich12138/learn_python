@@ -62,10 +62,40 @@
 
 
 # 6、切分 split() 把字符串按照某种分隔符进行切分 默认切分空格，返回list
-msg = "hello world asdasda"
+# msg = "hello world asdasda"
 # res = msg.split(" ")
 # print(res)
 
 # 指定分割次数
-res = msg.split(" ", 1)
-print(res)
+# res = msg.split(" ", 1)
+# print(res)
+
+
+# 需要掌握的操作
+# 1、strip、lstrip、rstrip
+# msg = "***wq***"
+# print(msg.strip("*"))  # 去掉两侧的制定字符
+# print(msg.lstrip("*"))  # 只去掉左侧指定字符
+# print(msg.rstrip("*"))  # 只去掉右侧指定字符
+
+# 2、lower，upper
+# msg = "Wwq"
+# print(msg.upper())  # 转化为大写
+# print(msg.lower())  # 转化为小写
+
+
+# 3、startswith()、endswith()
+# msg = "hello wq world hahaha"
+# print(msg.startswith("hello"))  # 是否以特定字符开头
+# print(msg.endswith("ha"))  # 是否以特定字符结尾
+
+# 4、split()、rsplit()
+# msg = "wq:18:m"
+# print(msg.split(":", 1))  # ['wq', '18:m']
+# print(msg.rsplit(":", 1))  # ['wq:18', 'm']
+
+
+# 5、join把列表拼接成字符串
+# l1 = ['wq', '18:m']
+# res = ":".join(l1)  # 按照某个分隔符，把列表里的全部元素拼接成一个大字符串
+# print(res)
