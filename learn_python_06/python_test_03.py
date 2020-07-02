@@ -50,10 +50,12 @@ name = " aleX"
 # print(res)
 # 10) 输出name后两个字符
 # res = name[4:2:-1]
+# res = name[-2:]
 # print(res)
 # 11) 输出name中e所在的索引值
 # res = name.index("e")
 # print(res)
 # 12) 去掉最后一个字符
 res = name[0:4]
+res = name[:-1]
 print(res)
