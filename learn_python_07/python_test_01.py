@@ -99,3 +99,9 @@ l = [1, 2.3, "a", [1, 2, 3, 4], {"k1": 1}]
 # l.clear()
 # print(l)
 
+
+# l.reverse() 不是排序就是将列表倒置
+# 反转列表
+l.reverse()
+print(l)
+
