@@ -11,7 +11,7 @@
 
 # 函数
 # 1、按照索引取值(正向+反向)：可取可改
-l = [1, 2.3, "a", [1, 2, 3, 4], {"k1": 1}]
+# l = [1, 2.3, "a", [1, 2, 3, 4], {"k1": 1}]
 
 # 正向取值
 # print(l[0])
@@ -35,16 +35,30 @@ l = [1, 2.3, "a", [1, 2, 3, 4], {"k1": 1}]
 # print(l)
 
 # 7、往list里添加list
-new_l = ["1", "asd", "4rt"]
+# new_l = ["1", "asd", "4rt"]
 # 循环实现
 # for item in new_l:
 #     l.append(item)
 # print(l)
 
 # 函数实现
-l.extend(new_l)
-print(l)
+# l.extend(new_l)
+# print(l)
 
 
 # 、删除
+l = [1, 2.3, "a", [1, 2, 3, 4], {"k1": 1}]
+
+# 方式1 通用删除方法，没有返回值
+# del l[1]
+# print(l)
+
+# 方式2 l.pop() 根据索引删除，不指定索引，默认删除最后一个
+# item = l.pop()
+# item1 = l.pop(2)
+# print(item1, l)
+
+# 方式3 l.remove() 根据指定元素删除，没有返回值
+res = l.remove("a")
+print(res, l)
 # 、循环
