@@ -33,11 +33,11 @@ l = [1, 2.3, "a", [1, 2, 3, 4], {"k1": 1}]
 
 
 # 3、长度
-print(len(l))
+# print(len(l))
 
 # 4、成员运算 in、not in
-print("a" in l)
-print("c" not in l)
+# print("a" in l)
+# print("c" not in l)
 
 # 5、追加 永远在末尾添加
 # l.append("asdasdasd")
@@ -74,4 +74,8 @@ print("c" not in l)
 # 方式3 l.remove() 根据指定元素删除，没有返回值
 # l.remove("a")
 # print(l)
-# 、循环
+
+
+# 循环
+for item in l:
+    print(item)
