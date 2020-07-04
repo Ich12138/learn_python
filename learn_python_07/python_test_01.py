@@ -119,13 +119,29 @@
 
 
 # 用列表模拟堆栈
-# 队列
+# # 队列
+# l = []
+#
+# # 入队操作
+# l.append("1")
+# l.append("2")
+# l.append("3")
+#
+# print(l)
+#
+# # 出队操作
+# l.pop(0)
+# print(l)
+
+
+
+# 栈
 l = []
 
 # 入队操作
-l.append("1")
-l.append("2")
-l.append("3")
+l.insert(0, "1")
+l.insert(0, "2")
+l.insert(0, "3")
 
 print(l)
 
