@@ -29,13 +29,14 @@ l = [1, 2.3, "a", [1, 2, 3, 4], {"k1": 1}]
 # res = l[0:2]
 # print(res)
 
-print(l[::-1])  # 倒置整个列表
-
-
+# print(l[::-1])  # 倒置整个列表
 
 
 # 3、长度
-# 4、成员运算 in、not in
+print(len(l))
+
+
+
 # 5、追加 永远在末尾添加
 # l.append("asdasdasd")
 # print(l)
