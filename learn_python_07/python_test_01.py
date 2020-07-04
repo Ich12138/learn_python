@@ -91,5 +91,11 @@ l = [1, 2.3, "a", [1, 2, 3, 4], {"k1": 1}]
 
 # l.index()
 # 查找某一元素索引,找不到报错
-print(l.index(1))
+# print(l.index(1))
+
+
+# l.clear()
+# 清空列表里的元素
+# l.clear()
+# print(l)
 
