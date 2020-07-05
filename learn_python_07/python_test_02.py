@@ -22,6 +22,36 @@
 
 
 # 类型转换：能被for循环的类型都可以被转换为元组
-print(tuple("hello"))
-print(tuple([1,2,3,["aaa", "bbb"]]))
-print(tuple({"k1": 1, "k2": "ccc"}))
+# print(tuple("hello"))
+# print(tuple([1,2,3,["aaa", "bbb"]]))
+# print(tuple({"k1": 1, "k2": "ccc"}))
+
+# 内置方法
+# 按照索引取值(正向+反向)：只能取
+t = (1, "q", [1, 2, 3], {"k1": 1, "k2": "2"})
+# print(t[1])
+# print(t[-2])
+
+
+# 切片
+# print(t[::2])
+# print(t[::-1])
+
+# 长度
+# print(len(t))
+
+
+# 成员运算 in ,not in
+# print(1 in t)
+
+
+# 循环
+# for item in t:
+#     print(item)
+
+
+# 内置方法 就两个方法
+t = (1, 2, 3)
+print(t.index(1))
+print(t.count(1))
+
