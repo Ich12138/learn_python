@@ -96,3 +96,23 @@
 
 # for x, y in d.items():
 #     print(x, y)
+
+
+# 其他方法
+d = {"k1": 111, "k2": 2222, "k3": "Qweqwe"}
+# d.clear()
+# print(d)
+
+# 直接取值d["k1"]若key不存在则直接报错，get方法不会
+# res = d.get("k4")
+# print(res)
+
+
+# 若d里面没有k1则添加k1并设置默认value 1111，若有就不进行操作   函数执行完之后返回k1所对应的值
+d.setdefault("k1", "asdasdasd")
+
+
+
+# dic = {"asd": 222, "k1": "sdfsdf"}
+# d.update(dic)
+# print(d)
