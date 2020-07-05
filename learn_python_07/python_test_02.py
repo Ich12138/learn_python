@@ -19,3 +19,9 @@
 # t = (1, 1.3, ["aaa", "bbb"])
 # t[2][0] = "cccccc"
 # print(t)
+
+
+# 类型转换：能被for循环的类型都可以被转换为元组
+print(tuple("hello"))
+print(tuple([1,2,3,["aaa", "bbb"]]))
+print(tuple({"k1": 1, "k2": "ccc"}))
