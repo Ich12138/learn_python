@@ -84,3 +84,15 @@
 # popitem随机删除，并返回随机删除的key，value所组成的元组
 # res = d.popitem()
 # print(res, type(res))  # ('k3', 'Qweqwe') <class 'tuple'>
+
+# d = {"k1": 111, "k2": 2222, "k3": "Qweqwe"}
+
+# keys(), values(), items() 方法
+# for key in d.keys():
+#     print(key)
+
+# for value in d.values():
+#     print(value)
+
+# for x, y in d.items():
+#     print(x, y)
