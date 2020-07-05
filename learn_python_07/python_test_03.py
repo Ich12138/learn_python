@@ -1,5 +1,5 @@
 # 字典类型
-# 定义
+# 定义：{}内用逗号隔开多个key，value，其中value是任意类型，但key必须是不可变类型，且不能重复
 # dis = {"k1": 1, "k2": [1, 2, 4], "k3": {"v1": 19}}
 
 # d = {}  # 默认定义出来的是空字典
@@ -36,7 +36,7 @@
 
 # 创造一个value为None的字典
 # 方式一
-keys = ["name", "age", "gender"]
+# keys = ["name", "age", "gender"]
 # values = None
 # d = {}
 # for item in keys:
@@ -45,4 +45,42 @@ keys = ["name", "age", "gender"]
 
 
 # 方式二
-print({}.fromkeys(keys))
+# print({}.fromkeys(keys))
+
+
+# 内置方法
+# 按key取值：可存可取
+# d = {"k1": 111}
+# # 若key存在则修改
+# d["k1"] = 2222
+# # 若不存在则添加
+# d["k2"] = 333
+# print(d)
+#
+#
+# # 长度
+# print(len(d))
+#
+#
+# # 成员运算 in， not in
+# print("k1" in d)
+# print(222 in d)
+
+
+# 删除
+# d = {"k1": 111, "k2": 2222, "k3": "Qweqwe"}
+
+# 通用删除
+# del d["k1"]
+# print(d)
+
+# 字典自带的删除方法
+# pop函数根据key删除元素,并返回删除key对应的值
+# res = d.pop("k1")
+# print(d)
+# print(res)
+
+
+# popitem随机删除，并返回随机删除的key，value所组成的元组
+# res = d.popitem()
+# print(res, type(res))  # ('k3', 'Qweqwe') <class 'tuple'>
