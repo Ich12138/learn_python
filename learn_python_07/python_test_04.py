@@ -45,18 +45,22 @@ friends2 = {"Jy", "ricky", "jason", "egon"}  # 用户2的好友们
 
 # 1：取交集：两者共同好友
 # res = friends1 & friends2
+# res = friends1.intersection(friends2)
 # print(res)
 
 # 2：取并集，两个所有好友
 # res = friends1 | friends2
+# res = friends1.union(friends2)
 # print(res)
 
 # 3：差集(有左右顺序之分)，去friends1独有的好友
 # res = friends1 - friends2
+# res = friends1.difference(friends2)
 # print(res)
 
 # 4：对称差集(^) # 求两个用户独有的好友们（即去掉共有的好友）
 # res = friends1 ^ friends2
+# res = friends1.symmetric_difference(friends2)
 # print(res)
 
 # 5：父子集：包含关系
@@ -68,6 +72,8 @@ friends2 = {"Jy", "ricky", "jason", "egon"}  # 用户2的好友们
 
 # s1 = {1, 2, 3}
 # s2 = {1, 2}
+# print(s1.issuperset(s2))  #父级
+# print(s1.issubset(s2))  # 子集
 # print(s1 > s2)  # s1是s2的父
 
 
