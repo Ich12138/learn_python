@@ -25,5 +25,26 @@
 #     print("login success")
 # else:
 #     print('login error')
-# 2、wt
-# 3、at
+
+
+# 2、w: 只写模式，当文件存在时会在路径下创建空文件，当文件存在时,w模式会清空文件内容,指针位于开始位置
+# with open('../doc/xx.txt', mode='wt', encoding='utf-8') as file:
+#     # file.read()  # io.UnsupportedOperation: not readable
+#     file.write("asdasdadad")
+
+# 注意1: 在以w打开文件，在没有关闭的情况下，连续写,新写入的内容总是在旧的之后
+# with open('../doc/xx.txt', mode='wt', encoding='utf-8') as file:
+#     # file.read()  # io.UnsupportedOperation: not readable
+#     file.write("asdasdadad\n")
+#     file.write("asdfasdfas\n")
+#     file.write("123434523\n")
+
+
+# 3、a: 只追加写，在文件不存在时,会创建空文档，在文件存在时，文件指针会直接跳到内容末尾
+with open('../doc/x.txt', mode='at', encoding='utf-8') as f:
+    # f.read()  # 报错，不能读
+    f.write("哈哈哈\n")
+
+# 强调 w 模式与 a 模式的异同：
+# 1 相同点：在打开的文件不关闭的情况下，连续的写入，新写的内容总会跟在前写的内容之后
+# 2 不同点：以 a 模式重新打开文件，不会清空原文件内容，会将文件指针直接移动到文件末尾，新写的内容永远写在最后
