@@ -41,10 +41,17 @@
 
 
 # 3、a: 只追加写，在文件不存在时,会创建空文档，在文件存在时，文件指针会直接跳到内容末尾
-with open('../doc/x.txt', mode='at', encoding='utf-8') as f:
-    # f.read()  # 报错，不能读
-    f.write("哈哈哈\n")
+# with open('../doc/x.txt', mode='at', encoding='utf-8') as f:
+#     # f.read()  # 报错，不能读
+#     f.write("哈哈哈\n")
 
 # 强调 w 模式与 a 模式的异同：
 # 1 相同点：在打开的文件不关闭的情况下，连续的写入，新写的内容总会跟在前写的内容之后
 # 2 不同点：以 a 模式重新打开文件，不会清空原文件内容，会将文件指针直接移动到文件末尾，新写的内容永远写在最后
+
+# 小案例: a模式
+# 注册功能
+username = input("请输入用户名: ")
+password = input("请输入密码: ")
+with open('../doc/account.txt', mode='at', encoding='utf-8') as f:
+    f.write('{}:{}\n'.format(username, password))
