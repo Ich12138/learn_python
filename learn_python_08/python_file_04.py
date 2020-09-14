@@ -8,3 +8,22 @@
 #     print('第二次读'.center(50, "*"))
 #     res1 = f.read()
 #     print(res1)
+
+# 循环读取文件的每一行
+# with open("../doc/test2.txt", mode='rt', encoding='utf-8') as file2:
+#     for line in file2:
+#         username, password = line.strip().split(':')
+#         print('username: {}, passw'
+#               'ord: {}'.format(username, password))
+
+# 从文件读取用户名信息验证
+# input_username = input('input your username: ')
+# input_password = input('input your password: ')
+# with open("../doc/test2.txt", mode='rt', encoding='utf-8') as file1:
+#     username, password = file1.read().split(":")
+# if username == input_username and password == input_password:
+#     print("login success")
+# else:
+#     print('login error')
+# 2、wt
+# 3、at
