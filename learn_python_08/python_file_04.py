@@ -51,7 +51,17 @@
 
 # 小案例: a模式
 # 注册功能
-username = input("请输入用户名: ")
-password = input("请输入密码: ")
-with open('../doc/account.txt', mode='at', encoding='utf-8') as f:
-    f.write('{}:{}\n'.format(username, password))
+# username = input("请输入用户名: ")
+# password = input("请输入密码: ")
+# with open('../doc/account.txt', mode='at', encoding='utf-8') as f:
+#     f.write('{}:{}\n'.format(username, password))
+
+
+# 案例: w模式用来创建全新的文件
+# 文本文件的copy工具
+# src_file_path = input("源文件路径>>: ").strip()
+# target_file_path = input("目标文件路径>>: ").strip()
+# with open(r'{}'.format(src_file_path), mode='r', encoding='utf-8') as rf, \
+#         open(r'{}'.format(target_file_path), mode='w', encoding='utf-8') as wf:
+#     res = rf.read()
+#     wf.write(res)
