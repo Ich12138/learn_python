@@ -65,3 +65,6 @@
 #         open(r'{}'.format(target_file_path), mode='w', encoding='utf-8') as wf:
 #     res = rf.read()
 #     wf.write(res)
+
+
+# 了解: +不能单独使用,必须配合r,w,a
