@@ -19,12 +19,34 @@ b:binary模式
   3、一定不能指定encoding参数
 """
 # 读模式
-with open(r'../doc/x.txt', mode='rb') as f1:
-    res = f1.read()  # utf-8的二进制
-    print(res)
-    print(type(res))  # bytes类型  <class 'bytes'>
-    print(res.decode('utf-8'))
+# with open(r'../doc/x.txt', mode='rb') as f1:
+#     res = f1.read()  # utf-8的二进制
+#     print(res)
+#     print(type(res))  # bytes类型  <class 'bytes'>
+#     print(res.decode('utf-8'))
 
 # 写模式
-with open(r'../doc/test1.txt', mode='wb') as f2:
-    f2.write('王骞'.encode('utf-8'))
+# with open(r'../doc/test1.txt', mode='wb') as f2:
+#     f2.write('王骞'.encode('utf-8'))
+
+# 二进制模式文件拷贝工具
+src_file_path = input("请输入源文件路径: ")
+target_file_path = input("请输入目标文件路径: ")
+with open(r'{}'.format(src_file_path), mode='br') as src_file, \
+        open(r'{}'.format(target_file_path), mode='bw') as target_file:
+    for line in src_file:
+        target_file.write(line)
+
+# 补充: 循环读取文件
+# while 方式: 可控制每次读入的大小
+# with open(r'../doc/test.jpg', mode='br') as img_file:
+#     while True:
+#         res = img_file.read(1024)
+#         if len(res) == 0:
+#             break
+#         print(len(res))
+
+# for 方式
+# with open(r'../doc/test.jpg', mode='br') as img_file:
+#     for line in img_file:
+#         print(len(line))
