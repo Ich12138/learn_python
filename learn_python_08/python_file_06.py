@@ -18,9 +18,13 @@ b:binary模式
   2、可以针对所有文件
   3、一定不能指定encoding参数
 """
-
+# 读模式
 with open(r'../doc/x.txt', mode='rb') as f1:
     res = f1.read()  # utf-8的二进制
     print(res)
     print(type(res))  # bytes类型  <class 'bytes'>
     print(res.decode('utf-8'))
+
+# 写模式
+with open(r'../doc/test1.txt', mode='wb') as f2:
+    f2.write('王骞'.encode('utf-8'))
