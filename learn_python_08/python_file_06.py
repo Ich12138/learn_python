@@ -50,3 +50,13 @@ with open(r'{}'.format(src_file_path), mode='br') as src_file, \
 # with open(r'../doc/test.jpg', mode='br') as img_file:
 #     for line in img_file:
 #         print(len(line))
+
+
+# 其他文件操作方法
+# 读相关操作补充
+# f.readline()  # 读取一行内容,光标移动到第二行首部
+# f.readlines()  # 读取每一行内容,存放于列表中
+
+# 写相关操作补充
+# f.writelines(['333\n','444\n'])  # 文件模式
+# f.writelines([bytes('333\n',encoding='utf-8'),'444\n'.encode('utf-8')]) #b模式
