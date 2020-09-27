@@ -74,14 +74,13 @@
 # fun(*[1,2,3])
 
 # 形参与实参中都带*
-def fun(x, y, *args):
-    print(x, y, args)
+# def fun(x, y, *args):
+#     print(x, y, args)
 
 
 # fun("1", 2, *[3, 4, 5, 6, 7, 8])
 
-fun(*"hello")
-
+# fun(*"hello")
 
 
 # 2.4.2、可变长度的关键字参数: 用来接收溢出的关键字实参
@@ -91,3 +90,11 @@ fun(*"hello")
 #
 #
 # func(a='b', c=3)
+
+# **用在实参中(**后跟的值只能是字典)，实参中带**，先将**后的值打散成关键字实参
+def fun(x, y, z):
+    print(x, y, z)
+
+
+# fun(*{'x': 2, 'y': 'asda', 'z': 232})  # x y z
+fun(**{'x': 2, 'y': 'asda', 'z': 232})
