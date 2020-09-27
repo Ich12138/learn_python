@@ -106,3 +106,9 @@
 
 # fun(*{'x': 1, 'y': 2, 'z': 3, 'o': 'asd', 'c': '123'})  # TypeError: fun() takes 3 positional arguments but 5 were given
 # fun(**{'x': 1, 'y': 2, 'z': 3, 'o': 'asd', 'c': '123'})  # 1 2 3 {'o': 'asd', 'c': '123'}
+
+
+# * 与 ** 混用
+# *args必须在**kwargs之前
+def func(x, *args, **kwargs):
+    pass
