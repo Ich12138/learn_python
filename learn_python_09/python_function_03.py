@@ -92,9 +92,17 @@
 # func(a='b', c=3)
 
 # **用在实参中(**后跟的值只能是字典)，实参中带**，先将**后的值打散成关键字实参
-def fun(x, y, z):
-    print(x, y, z)
+# def fun(x, y, z):
+#     print(x, y, z)
+#
+#
+# # fun(*{'x': 2, 'y': 'asda', 'z': 232})  # x y z
+# fun(**{'x': 2, 'y': 'asda', 'z': 232})
 
 
-# fun(*{'x': 2, 'y': 'asda', 'z': 232})  # x y z
-fun(**{'x': 2, 'y': 'asda', 'z': 232})
+# 形参与实参都带**
+# def fun(x, y, z, **kwargs):
+#     print(x, y, z, kwargs)
+
+# fun(*{'x': 1, 'y': 2, 'z': 3, 'o': 'asd', 'c': '123'})  # TypeError: fun() takes 3 positional arguments but 5 were given
+# fun(**{'x': 1, 'y': 2, 'z': 3, 'o': 'asd', 'c': '123'})  # 1 2 3 {'o': 'asd', 'c': '123'}
