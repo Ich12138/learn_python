@@ -42,7 +42,7 @@
 # print(new_data('asdasdasd'))
 
 
-# 返回传入参数的奇数索引数据
+# 4、返回传入参数的奇数索引数据
 # def odd_index_element(obj):
 #     l = []
 #     for item in range(len(obj)):
@@ -52,3 +52,15 @@
 #
 #
 # print(odd_index_element(['a', 'd', 'e', 'a', '9']))
+
+
+# 5、返回字典中value长度大于2的键值对
+# def new_dic(obj):
+#     dit = {}
+#     for key in obj:
+#         if len(obj[key]) > 2:
+#             dit[key] = obj[key][0:2]
+#     return dit
+#
+#
+# print(new_dic({'a': 'v1v2', 'b': '12345', 'c': '8'}))
