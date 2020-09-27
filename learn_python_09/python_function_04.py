@@ -28,3 +28,15 @@
 #
 #
 # print(data_len((1,2,2,3,3,3,3,3)))
+
+
+# 3、检查传入列表长度，若大于2，就返回前两个长度内容
+# def new_data(obj):
+#     if len(obj) >= 2:
+#         l = []
+#         l.append(obj[0])
+#         l.append(obj[1])
+#         return l
+#
+#
+# print(new_data('asdasdasd'))
