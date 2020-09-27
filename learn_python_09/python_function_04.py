@@ -40,3 +40,15 @@
 #
 #
 # print(new_data('asdasdasd'))
+
+
+# 返回传入参数的奇数索引数据
+# def odd_index_element(obj):
+#     l = []
+#     for item in range(len(obj)):
+#         if item % 2 != 0:
+#             l.append(obj[item])
+#     return l
+#
+#
+# print(odd_index_element(['a', 'd', 'e', 'a', '9']))
