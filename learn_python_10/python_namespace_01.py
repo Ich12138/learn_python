@@ -10,6 +10,7 @@
 print
 <built-in function print>
 """
+
 # 存活周期: python解释器启动则产生,python解释器关闭则销毁
 
 # 1.2 全局名称空间(一个)
@@ -33,3 +34,29 @@ print
 # 内置名称空间
 # 全局名称空间
 # 局部名称空间
+
+
+# 示范1
+# def fun():
+#     print(x)
+#
+#
+# x = 222
+# fun()
+
+
+# 示范2
+# 名称空间的 "嵌套" 关系是以函数定义阶段为准的,与调用位置无关
+x = 1
+
+
+def func():
+    print(x)
+
+
+def foo():
+    x = 222
+    func()
+
+
+foo()
