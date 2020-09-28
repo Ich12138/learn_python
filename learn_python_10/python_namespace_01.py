@@ -47,16 +47,42 @@ print
 
 # 示范2
 # 名称空间的 "嵌套" 关系是以函数定义阶段为准的,与调用位置无关
-x = 1
+# x = 1
+#
+#
+# def func():
+#     print(x)
+#
+#
+# def foo():
+#     x = 222
+#     func()
+#
+#
+# foo()
+
+# 示范3
+# 函数嵌套定义
+# input = 111
+#
+#
+# def f1():
+#     input = 222
+#
+#     def f2():
+#         input = 333
+#         print(input)
+#
+#     f2()
+#
+#
+# f1()
 
 
-def func():
-    print(x)
-
-
-def foo():
-    x = 222
-    func()
-
-
-foo()
+# 示范4
+# x = 111
+#
+#
+# def f1():
+#     print(x)
+#     x = 222
