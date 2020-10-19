@@ -35,3 +35,17 @@ import time
 #
 #
 # index(111, 222)
+
+
+# 解决方案二
+# 问题: 没有修改被装饰对象的调用方式, 也没有修改源代码, 并且加上了新功能
+#      但是代码冗余
+# def index(x, y):
+#     time.sleep(3)
+#     print("index {}, {}".format(x, y))
+#
+#
+# start = time.time()
+# index(111, 222)
+# end = time.time()
+# print(end - start)
