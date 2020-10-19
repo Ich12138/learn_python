@@ -52,6 +52,7 @@ import time
 # print(end - start)
 
 # 解决方案三
+# 问题: 解决了方案二代码冗余问题, 但带来一个新问题就是函数的调用方式发生了改变
 def index(x, y):
     time.sleep(3)
     print("index {}, {}".format(x, y))
