@@ -147,29 +147,40 @@ import time
 
 # 语法糖: 在被装饰对象头上添加注解
 # 装饰器
-def timmer(func):
+# def timmer(func):
+#     def wrapper(*args, **kwargs):
+#         start = time.time()
+#         res = func(*args, **kwargs)
+#         end = time.time()
+#         print(end - start)
+#         return res
+#
+#     return wrapper
+#
+#
+# @timmer
+# def index(x, y, z):
+#     time.sleep(3)
+#     print("index {}, {}, {}".format(x, y, z))
+#
+#
+# @timmer
+# def home(name):
+#     time.sleep(2)
+#     print("welcome {} to home page".format(name))
+#     return 123
+#
+#
+# res = home("asd")
+# print("返回值-->", res)
+
+
+# 总结 无参装饰器模板
+def outer(func):
     def wrapper(*args, **kwargs):
-        start = time.time()
-        res = func(*args, **kwargs)
-        end = time.time()
-        print(end - start)
+        # 1、增加新功能
+        # 2、调用原函数
+        res = func(*args, **args)
         return res
 
     return wrapper
-
-
-@timmer
-def index(x, y, z):
-    time.sleep(3)
-    print("index {}, {}, {}".format(x, y, z))
-
-
-@timmer
-def home(name):
-    time.sleep(2)
-    print("welcome {} to home page".format(name))
-    return 123
-
-
-res = home("asd")
-print("返回值-->", res)
