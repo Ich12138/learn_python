@@ -53,16 +53,31 @@ import time
 
 # 解决方案三
 # 问题: 解决了方案二代码冗余问题, 但带来一个新问题就是函数的调用方式发生了改变
+# def index(x, y):
+#     time.sleep(3)
+#     print("index {}, {}".format(x, y))
+#
+#
+# def warpper():
+#     start = time.time()
+#     index(111, 222)
+#     end = time.time()
+#     print(end - start)
+#
+#
+# warpper()
+
+# 方案三优化一
 def index(x, y):
     time.sleep(3)
     print("index {}, {}".format(x, y))
 
 
-def warpper():
+def warpper(*args, **kwargs):
     start = time.time()
-    index(111, 222)
+    index(*args, **kwargs)
     end = time.time()
     print(end - start)
 
 
-warpper()
+warpper(111, y="dfd")
