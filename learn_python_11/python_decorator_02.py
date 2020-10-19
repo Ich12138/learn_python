@@ -58,14 +58,14 @@ import time
 #     print("index {}, {}".format(x, y))
 #
 #
-# def warpper():
+# def wrapper():
 #     start = time.time()
 #     index(111, 222)
 #     end = time.time()
 #     print(end - start)
 #
 #
-# warpper()
+# wrapper()
 
 # 方案三优化一: 将index参数写活
 # def index(x, y):
@@ -73,16 +73,17 @@ import time
 #     print("index {}, {}".format(x, y))
 #
 #
-# def warpper(*args, **kwargs):
+# def wrapper(*args, **kwargs):
 #     start = time.time()
 #     index(*args, **kwargs)
 #     end = time.time()
 #     print(end - start)
 #
 #
-# warpper(111, y="dfd")
+# wrapper(111, y="dfd")
 
-# 方案三-优化二
+
+# 方案三-优化二: 在优化一的基础上把被装饰对象写活了, 原来只能装饰index
 # def index(x, y, z):
 #     time.sleep(3)
 #     print("index {}, {}, {}".format(x, y, z))
@@ -92,17 +93,53 @@ import time
 #
 #
 # def outer(func):
-#     def warpper(*args, **kwargs):
+#     def wrapper(*args, **kwargs):
 #         start = time.time()
 #         func(*args, **kwargs)
 #         end = time.time()
 #         print(end - start)
 #
-#     return warpper
+#     return wrapper
 #
 #
+# 前一个index指向的是outer里的wrapper函数的内存地址, 后一个index还是原来的index函数的内存地址
 # index = outer(index)
 # print(index)
 # index(111, 222, z=333)
+
+
+# 方案三-优化三: 将wrapper做的跟被装饰对象一模一样
+def index(x, y, z):
+    time.sleep(3)
+    print("index {}, {}, {}".format(x, y, z))
+
+
+def home(name):
+    time.sleep(2)
+    print("welcome {} to home page".format(name))
+    return 123
+
+
+print(index)
+
+
+def outer(func):
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        res = func(*args, **kwargs)
+        end = time.time()
+        print(end - start)
+        return res
+
+    return wrapper
+
+
+home = outer(home)
+res = home("asd")
+print("返回值-->", res)
+# index = outer(index)
+# print(index)
+# index(111, 222, z=333)
+
 
 # 解决方案四: 如何在方案三的基础上不改变函数的调用方式
