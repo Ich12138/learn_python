@@ -17,6 +17,7 @@
 # 使用
 import time
 
+
 # 需求 在不修改index函数源代码的情况下以及调用方式的前提下为其添加统计运行时间的功能
 # def index(x, y):
 #     print("index {}, {}".format(x, y))
@@ -49,3 +50,18 @@ import time
 # index(111, 222)
 # end = time.time()
 # print(end - start)
+
+# 解决方案三
+def index(x, y):
+    time.sleep(3)
+    print("index {}, {}".format(x, y))
+
+
+def warpper():
+    start = time.time()
+    index(111, 222)
+    end = time.time()
+    print(end - start)
+
+
+warpper()
