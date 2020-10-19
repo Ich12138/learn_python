@@ -67,17 +67,20 @@ import time
 #
 # warpper()
 
-# 方案三优化一
-def index(x, y):
-    time.sleep(3)
-    print("index {}, {}".format(x, y))
+# 方案三优化一: 将index参数写活
+# def index(x, y):
+#     time.sleep(3)
+#     print("index {}, {}".format(x, y))
+#
+#
+# def warpper(*args, **kwargs):
+#     start = time.time()
+#     index(*args, **kwargs)
+#     end = time.time()
+#     print(end - start)
+#
+#
+# warpper(111, y="dfd")
 
 
-def warpper(*args, **kwargs):
-    start = time.time()
-    index(*args, **kwargs)
-    end = time.time()
-    print(end - start)
-
-
-warpper(111, y="dfd")
+# 解决方案四: 如何在方案三的基础上不改变函数的调用方式
