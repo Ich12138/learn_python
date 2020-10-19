@@ -23,3 +23,15 @@ import time
 #
 #
 # index(111, 222)
+
+# 解决方案一:
+# 问题: 修改了源代码, 违反了开放封闭原则
+# def index(x, y):
+#     start = time.time()
+#     time.sleep(3)
+#     print("index {}, {}".format(x, y))
+#     end = time.time()
+#     print(end - start)
+#
+#
+# index(111, 222)
