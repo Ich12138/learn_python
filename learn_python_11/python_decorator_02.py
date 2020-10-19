@@ -82,5 +82,27 @@ import time
 #
 # warpper(111, y="dfd")
 
+# 方案三-优化二
+# def index(x, y, z):
+#     time.sleep(3)
+#     print("index {}, {}, {}".format(x, y, z))
+#
+#
+# print(index)
+#
+#
+# def outer(func):
+#     def warpper(*args, **kwargs):
+#         start = time.time()
+#         func(*args, **kwargs)
+#         end = time.time()
+#         print(end - start)
+#
+#     return warpper
+#
+#
+# index = outer(index)
+# print(index)
+# index(111, 222, z=333)
 
 # 解决方案四: 如何在方案三的基础上不改变函数的调用方式
