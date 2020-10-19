@@ -109,21 +109,45 @@ import time
 
 
 # 方案三-优化三: 将wrapper做的跟被装饰对象一模一样
-def index(x, y, z):
-    time.sleep(3)
-    print("index {}, {}, {}".format(x, y, z))
+# def index(x, y, z):
+#     time.sleep(3)
+#     print("index {}, {}, {}".format(x, y, z))
+#
+#
+# def home(name):
+#     time.sleep(2)
+#     print("welcome {} to home page".format(name))
+#     return 123
+#
+#
+# print(index)
+#
+#
+# def outer(func):
+#     def wrapper(*args, **kwargs):
+#         start = time.time()
+#         res = func(*args, **kwargs)
+#         end = time.time()
+#         print(end - start)
+#         return res
+#
+#     return wrapper
+#
+#
+# home = outer(home)
+# res = home("asd")
+# print("返回值-->", res)
+# index = outer(index)
+# print(index)
+# index(111, 222, z=333)
 
 
-def home(name):
-    time.sleep(2)
-    print("welcome {} to home page".format(name))
-    return 123
+# 解决方案四: 如何在方案三的基础上不改变函数的调用方式
 
 
-print(index)
-
-
-def outer(func):
+# 语法糖: 在被装饰对象头上添加注解
+# 装饰器
+def timmer(func):
     def wrapper(*args, **kwargs):
         start = time.time()
         res = func(*args, **kwargs)
@@ -134,12 +158,18 @@ def outer(func):
     return wrapper
 
 
-home = outer(home)
+@timmer
+def index(x, y, z):
+    time.sleep(3)
+    print("index {}, {}, {}".format(x, y, z))
+
+
+@timmer
+def home(name):
+    time.sleep(2)
+    print("welcome {} to home page".format(name))
+    return 123
+
+
 res = home("asd")
 print("返回值-->", res)
-# index = outer(index)
-# print(index)
-# index(111, 222, z=333)
-
-
-# 解决方案四: 如何在方案三的基础上不改变函数的调用方式
