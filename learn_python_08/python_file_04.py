@@ -53,7 +53,7 @@
 # 注册功能
 # username = input("请输入用户名: ")
 # password = input("请输入密码: ")
-# with open('../doc/account.txt', mode='at', encoding='utf-8') as f:
+# with open('../doc/account.txt.txt', mode='at', encoding='utf-8') as f:
 #     f.write('{}:{}\n'.format(username, password))
 
 
