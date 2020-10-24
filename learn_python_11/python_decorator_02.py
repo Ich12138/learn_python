@@ -180,7 +180,7 @@ def outer(func):
     def wrapper(*args, **kwargs):
         # 1、增加新功能
         # 2、调用原函数
-        res = func(*args, **args)
+        res = func(*args, **kwargs)
         return res
 
     return wrapper
