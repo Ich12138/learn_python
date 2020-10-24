@@ -55,6 +55,20 @@
 #           迭代器对象.__iter__(): 得到迭代器本身
 
 
+# d = {"a": 1, 'b': 2, 'c': 3}
+# d_iterator = d.__iter__()
+# print(d_iterator is d_iterator.__iter__().__iter__())  # True
+
+
+# for 循环的工作原理: for循环可以称之为迭代器循环
+# 1、调用对象的__iter__()得到一个迭代器对象
+# 2、调用迭代器对象的__next__()拿到返回值,然后将返回值赋值给k
+# 3、循环往复2, 知道抛出StopIteration异常, for循环会捕捉异常然后结束循环
+
 d = {"a": 1, 'b': 2, 'c': 3}
-d_iterator = d.__iter__()
-print(d_iterator is d_iterator.__iter__().__iter__())  # True
+for k in d:
+    print(k)
+
+
+# 可迭代对象: 字符串、列表、元组、字典、集合、文件对象
+# 迭代器对象: 文件对象
