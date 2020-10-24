@@ -29,8 +29,8 @@
 """
 
 # 调用可迭代对象下的__iter__()方法会将其转换成迭代器对象
-d = {"a": 1, 'b': 2, 'c': 3}
-d_iterator = d.__iter__()
+# d = {"a": 1, 'b': 2, 'c': 3}
+# d_iterator = d.__iter__()
 # print(d_iterator)  # <dict_keyiterator object at 0x02023CF8>
 
 # 简单使用
@@ -41,8 +41,20 @@ d_iterator = d.__iter__()
 
 
 # 循环取值
-while True:
-    try:
-        print(d_iterator.__next__())
-    except StopIteration:
-        break
+# while True:
+#     try:
+#         print(d_iterator.__next__())
+#     except StopIteration:
+#         break
+
+# 可迭代对象与迭代器对象详解
+# 可迭代对象("可转成迭代器的对象"): 内置有__iter__()方法的对象
+#             可迭代对象.__iter__(): 得到迭代器对象
+# 迭代器对象: 内置有__next__()方法并且内置有__iter__方法的对象
+#           迭代器对象.__next__(): 得到下一个值
+#           迭代器对象.__iter__(): 得到迭代器本身
+
+
+d = {"a": 1, 'b': 2, 'c': 3}
+d_iterator = d.__iter__()
+print(d_iterator is d_iterator.__iter__().__iter__())  # True
