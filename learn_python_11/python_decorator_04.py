@@ -9,4 +9,40 @@
     为了解决索引的局限性, python必须提供一种功能不依赖于索引取值的方式, 这就是迭代器
 
 可迭代对象: 但凡内置有__iter__方法的都可称之为可迭代对象
+    s = ''
+    s.__iter__()
+
+    l = []
+    l.__iter__()
+
+    t = (1,)
+    t.__iter__()
+
+    d = {"a":1}
+    d.__iter__()
+
+    set1 = {1,2,3}
+    set1.__iter__()
+
+    with open('./doc/account.txt', mode='w', encoding='utf-8') as f1:
+        f1.__iter__()
 """
+
+# 调用可迭代对象下的__iter__()方法会将其转换成迭代器对象
+d = {"a": 1, 'b': 2, 'c': 3}
+d_iterator = d.__iter__()
+# print(d_iterator)  # <dict_keyiterator object at 0x02023CF8>
+
+# 简单使用
+# print(d_iterator.__next__())
+# print(d_iterator.__next__())
+# print(d_iterator.__next__())
+# print(d_iterator.__next__())  # 抛出异常 StopIteration
+
+
+# 循环取值
+while True:
+    try:
+        print(d_iterator.__next__())
+    except StopIteration:
+        break
