@@ -10,3 +10,18 @@ def func(x, y):
 
 res = func(3, 4)
 print(res)
+
+"""
+生成式
+    列表生成式
+"""
+# 提取以s结尾的字符串
+l = ['wq_s', 'asd_s', 'asdasd_s', 'zxxc', '456']
+
+# 方式一
+# new_l = []
+# for s in l:
+#     if s.endswith('s'):
+#         new_l.append(s)
+#
+# print(new_l)
