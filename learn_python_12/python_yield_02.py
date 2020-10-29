@@ -51,3 +51,9 @@ l = ['wq_s', 'asd_s', 'asdasd_s', 'zxxc', '456']
 # items = [('name', 'wq'), ('age', 18), ('gender', 'male')]
 # dic = {k: v for k, v in items if k != 'gender'}
 # print(dic)
+
+
+# 3、集合生成式
+# keys = ['name', 'age', 'gender']
+# set1 = {key for key in keys}
+# print(set1, type(set1))
