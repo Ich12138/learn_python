@@ -25,3 +25,7 @@ l = ['wq_s', 'asd_s', 'asdasd_s', 'zxxc', '456']
 #         new_l.append(s)
 #
 # print(new_l)
+
+# 方式二
+# new_l = [s for s in l if s.endswith('s')]
+# print(new_l)
