@@ -62,10 +62,29 @@ l = ['wq_s', 'asd_s', 'asdasd_s', 'zxxc', '456']
 # 4、元组生成式: 没有
 
 # 5、生成器生成式
-keys = ['name', 'age', 'gender']
-g = (key for key in keys)
-print(g)
-print(next(g))
-print(next(g))
-print(next(g))
-print(next(g))
+# keys = ['name', 'age', 'gender']
+# g = (key for key in keys)
+# print(g)
+# print(next(g))
+# print(next(g))
+# print(next(g))
+# print(next(g))
+
+
+# 统计./doc/text1.txt里的字符个数
+# with open('./doc/test1.txt', mode='rt', encoding='utf-8') as f1:
+    # 方式一
+    # res = 0
+    # for line in f1:
+    #     res += len(line)
+    # print(res)
+
+    # 方式二
+    # res = sum([len(line) for line in f1])
+    # print(res)
+
+    # 方式三 效率最高
+    # res = sum((len(line) for line in f1))
+    # 上述可简写为
+    # res = sum(len(line) for line in f1)
+    # print(res)
