@@ -57,3 +57,15 @@ l = ['wq_s', 'asd_s', 'asdasd_s', 'zxxc', '456']
 # keys = ['name', 'age', 'gender']
 # set1 = {key for key in keys}
 # print(set1, type(set1))
+
+
+# 4、元组生成式: 没有
+
+# 5、生成器生成式
+keys = ['name', 'age', 'gender']
+g = (key for key in keys)
+print(g)
+print(next(g))
+print(next(g))
+print(next(g))
+print(next(g))
