@@ -21,3 +21,17 @@ num_list = [0, 3, 5, 6, 8, 12, 34, 78, 90]
 #
 # print(binary_search(6))
 # print(binary_search(100))
+
+
+# 方法二: 递归
+def binary_search(find_num, l):
+    mid_index = len(l) // 2
+    mid_val = l[mid_index]
+    if find_num > mid_val:
+        l = l[mid_index + 1:]
+        binary_search(find_num, l)
+    if find_num < mid_val:
+        l = l[:mid_index]
+        binary_search(find_num, l)
+    else:
+        print("find it , index: {}".format(mid_index))
