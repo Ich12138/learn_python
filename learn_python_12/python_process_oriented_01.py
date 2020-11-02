@@ -8,8 +8,8 @@
 # 函数式编程
 # 1、有名函数
 # func = 函数的内存地址
-def func(x, y):
-    return x + y
+# def func(x, y):
+#     return x + y
 
 
 # print(func)  # <function func at 0x0214C028>
@@ -24,9 +24,33 @@ def func(x, y):
 # print(res)
 
 # 方式二:
-func1 = lambda x, y: x + y
-print(func1)  # <function <lambda> at 0x01DA87C0>
-res = func1(2, 3)
-print(res)
+# func1 = lambda x, y: x + y
+# print(func1)  # <function <lambda> at 0x01DA87C0>
+# res = func1(2, 3)
+# print(res)
 
 # 4、匿名函数用于临时调用一次的场景: 更多的是将匿名函数与其他函数配合的场景
+
+# 5、匿名函数的应用
+
+salaries = {
+    'siry': 3000,
+    'tom': 7000,
+    'lili': 10000,
+    'jack': 2000
+}
+
+
+# 需求1: 找出薪资最高的那个人
+# 方法一:
+# def return_value(k):
+#     return salaries[k]
+#
+#
+# res = max(salaries, key=return_value)
+# print(res, salaries[res])
+
+
+# 方法二
+# res = max(salaries, key=lambda k: salaries[k])
+# print(res, salaries[res])
