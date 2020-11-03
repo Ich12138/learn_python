@@ -54,3 +54,9 @@ salaries = {
 # 方法二
 # res = max(salaries, key=lambda k: salaries[k])
 # print(res, salaries[res])
+
+
+# sorted方法应用
+# 根据工资进行比较
+res = sorted(salaries, key=lambda k: salaries[k])
+print(res)
