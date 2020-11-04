@@ -84,5 +84,15 @@ l = ['alex_xx', 'asda', 'qwe']
 
 
 # 方案二
-res = filter(lambda name: name.endswith('_xx'), l)
-print(res.__next__())
+# res = filter(lambda name: name.endswith('_xx'), l)
+# print(res.__next__())
+
+# reduce的应用
+from functools import reduce
+
+res = reduce(lambda x, y: x + y, [1, 2, 3, 4], 10)
+print(res)
+
+
+res1 = reduce(lambda x, y: x + y, ['a', 'q', 'w', 'e'])
+print(res1)
