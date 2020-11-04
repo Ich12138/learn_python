@@ -79,5 +79,10 @@ salaries = {
 l = ['alex_xx', 'asda', 'qwe']
 
 # 方案一
-res = [name for name in l if name.endswith('_xx')]
-print(res)
+# res = [name for name in l if name.endswith('_xx')]
+# print(res)
+
+
+# 方案二
+res = filter(lambda name: name.endswith('_xx'), l)
+print(res.__next__())
