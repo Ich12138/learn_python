@@ -40,7 +40,6 @@ salaries = {
     'jack': 2000
 }
 
-
 # 需求1: 找出薪资最高的那个人
 # 方法一:
 # def return_value(k):
@@ -58,5 +57,13 @@ salaries = {
 
 # sorted方法应用
 # 根据工资进行比较
-res = sorted(salaries, key=lambda k: salaries[k])
-print(res)
+# res = sorted(salaries, key=lambda k: salaries[k])
+# print(res)
+
+# map的应用
+# 在每个元素后面添加'_xxx'
+l = ['alex', 'asda', 'qwe']
+
+# 方案一: 列表生成式
+# new_l = [name + '_xxx' for name in l]
+# print(new_l)
