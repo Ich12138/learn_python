@@ -62,7 +62,7 @@ salaries = {
 
 # map的应用
 # 在每个元素后面添加'_xxx'
-l = ['alex', 'asda', 'qwe']
+# l = ['alex', 'asda', 'qwe']
 
 # 方案一: 列表生成式
 # new_l = [name + '_xxx' for name in l]
@@ -70,5 +70,14 @@ l = ['alex', 'asda', 'qwe']
 
 
 # 方案二: map函数
-res = map(lambda name:name + '_xxx',l)
+# res = map(lambda name:name + '_xxx',l)
+# print(res)
+
+
+# filter的应用
+# 需求选出后缀是_xx的字符串
+l = ['alex_xx', 'asda', 'qwe']
+
+# 方案一
+res = [name for name in l if name.endswith('_xx')]
 print(res)
