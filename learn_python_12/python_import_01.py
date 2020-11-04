@@ -23,3 +23,7 @@ import numpy as np
 # 5、import ... as ...
 # 给名字较长的模块器别名
 import numpy as np
+
+# 6、模块是第一类对象
+# 7、自定义模块的命名应该采用纯小写+下划线的风格
+# 8、可在函数内导入模块
