@@ -67,3 +67,8 @@ l = ['alex', 'asda', 'qwe']
 # 方案一: 列表生成式
 # new_l = [name + '_xxx' for name in l]
 # print(new_l)
+
+
+# 方案二: map函数
+res = map(lambda name:name + '_xxx',l)
+print(res)
