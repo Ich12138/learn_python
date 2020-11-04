@@ -19,3 +19,7 @@ import numpy as np
 # 1)python内置模块
 # 2)第三方模块
 # 3)自定义模块
+
+# 5、import ... as ...
+# 给名字较长的模块器别名
+import numpy as np
