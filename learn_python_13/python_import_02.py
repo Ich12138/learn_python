@@ -12,7 +12,11 @@ import sys
 
 # 值为第一个列表, 存放了一系列文件夹
 # 其中第一个文件夹是当前执行文件所在的文件夹
-print(sys.path)
+# print(sys.path)
 
 # sys.modules查看已经加载到内存中的模块
-print(sys.modules)
+# print(sys.modules)
+
+
+# sys.path的应用
+# sys.path.append()
