@@ -28,7 +28,6 @@ import sys
 # import sys  # 导入模块
 #
 # x = 1  # 定义全局变量,如果非必须,则最好使用局部变量,这样可以提高代码的易维护性,并且可以节省内存提高性能
-# 
 #
 # class Foo:  # 定义类,并写好类的注释
 #     'Class Foo is used to...'
