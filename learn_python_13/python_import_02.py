@@ -20,3 +20,25 @@ import sys
 
 # sys.path的应用
 # sys.path.append()
+
+# 编写规范的模块
+
+# "The module is used to..."  # 模块的文档描述
+#
+# import sys  # 导入模块
+#
+# x = 1  # 定义全局变量,如果非必须,则最好使用局部变量,这样可以提高代码的易维护性,并且可以节省内存提高性能
+# 
+#
+# class Foo:  # 定义类,并写好类的注释
+#     'Class Foo is used to...'
+#     pass
+#
+#
+# def test():  # 定义函数,并写好函数的注释
+#     'Function test is used to…'
+#     pass
+#
+#
+# if __name__ == '__main__':  # 主程序
+#     test()  # 在被当做脚本执行时,执行此处的代码
