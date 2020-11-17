@@ -34,7 +34,7 @@ func_dic = {
 def run():
     while True:
         for k in func_dic:
-            print(func_dic[k][0])
+            print(k, func_dic[k][0])
 
         choice = input("请输入指令编号: ").strip()
         if choice in func_dic:
