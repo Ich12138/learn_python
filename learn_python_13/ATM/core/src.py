@@ -14,3 +14,7 @@ def register():
 def withdraw():
     print("提现功能")
 
+
+# 转账功能
+def transfer():
+    print("转账功能")
