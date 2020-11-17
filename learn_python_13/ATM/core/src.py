@@ -9,3 +9,8 @@ def login():
 def register():
     print("注册功能")
 
+
+# 提现功能
+def withdraw():
+    print("提现功能")
+
