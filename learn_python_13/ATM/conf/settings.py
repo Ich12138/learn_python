@@ -1,2 +1,4 @@
 # 配置文件
-LOG_PATH = r'F:\Jetbrains\PythonSoftWare\PythonProjects\learn_python\learn_python_13\ATM\log\user.log'
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+LOG_PATH = r'%s\log\user.log' %BASE_DIR
