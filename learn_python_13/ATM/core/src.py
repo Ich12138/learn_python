@@ -1,5 +1,12 @@
 # 核心代码逻辑
 
+# 记录日志功能
+def logger(msg):
+    with open(r'F:\Jetbrains\PythonSoftWare\PythonProjects\learn_python\learn_python_13\ATM\log\user.log', mode='at',
+         encoding='utf-8') as log_f:
+        log_f.write('%s\n' %msg)
+
+
 # 登录功能
 def login():
     print("登录功能")
