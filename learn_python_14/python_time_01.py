@@ -24,6 +24,7 @@ import time
 # p335 时间模块2
 # 二: datetime
 import datetime
+
 # print(datetime.datetime.now())  # 2020-11-18 16:31:09.666523
 # print(datetime.datetime.now() + datetime.timedelta(days=-3))
 # print(datetime.datetime.now() + datetime.timedelta(weeks=-3))
@@ -55,3 +56,16 @@ import datetime
 # format_time = '2035-11-11 16:56:54'
 # res = time.strptime(format_time, '%Y-%m-%d %H:%M:%S')
 # print(res)
+
+
+# 真正需要掌握的只有一条: format string <------------------>time stamp
+
+# 1、将格式化时间 转成 结构化时间 再转成 时间戳 计算七天后的时间
+# struct_time = time.strptime('2035-11-11 16:56:54', '%Y-%m-%d %H:%M:%S')
+# time_stamp = time.mktime(struct_time) + 7 * 24 * 60 * 60  # 计算七天后的秒数
+# print(time_stamp)
+
+# 2、将时间戳 转回 结构化时间 再转回 格式化时间
+# str_time = time.localtime(time_stamp)
+# format_time = time.strftime('%Y-%m-%d %H:%M:%S', str_time)
+# print(format_time)
