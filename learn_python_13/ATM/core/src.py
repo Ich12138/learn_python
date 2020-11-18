@@ -1,30 +1,36 @@
 # 核心代码逻辑
+import time
+
 
 # 记录日志功能
 def logger(msg):
     with open(r'F:\Jetbrains\PythonSoftWare\PythonProjects\learn_python\learn_python_13\ATM\log\user.log', mode='at',
-         encoding='utf-8') as log_f:
-        log_f.write('%s\n' %msg)
+              encoding='utf-8') as log_f:
+        log_f.write('%s %s\n' % (time.strftime('%Y-%m-%d %H-%M-%S'), msg))
 
 
 # 登录功能
 def login():
     print("登录功能")
+    logger('xxx刚刚登陆了')
 
 
 # 注册功能
 def register():
     print("注册功能")
+    logger('xxx刚刚注册')
 
 
 # 提现功能
 def withdraw():
     print("提现功能")
+    logger('xxx刚刚提现了')
 
 
 # 转账功能
 def transfer():
     print("转账功能")
+    logger('xxx刚刚转账了')
 
 
 # 函数字典
