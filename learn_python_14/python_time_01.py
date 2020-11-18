@@ -19,3 +19,11 @@ import time
 # print(res)  # time.struct_time(tm_year=2020, tm_mon=11, tm_mday=18, tm_hour=16, tm_min=23, tm_sec=11, tm_wday=2, tm_yday=323, tm_isdst=0)
 # print('当前的年份: {}'.format(res.tm_year))
 # print('今天是今年的第几天: {}'.format(res.tm_yday))
+
+
+# p335 时间模块2
+# 二: datetime
+import datetime
+# print(datetime.datetime.now())  # 2020-11-18 16:31:09.666523
+# print(datetime.datetime.now() + datetime.timedelta(days=-3))
+# print(datetime.datetime.now() + datetime.timedelta(weeks=-3))
