@@ -69,3 +69,10 @@ import datetime
 # str_time = time.localtime(time_stamp)
 # format_time = time.strftime('%Y-%m-%d %H:%M:%S', str_time)
 # print(format_time)
+
+# p337 了解知识
+# time.sleep(3)  # 睡三秒
+# print(time.asctime())  # Wed Nov 18 17:17:11 2020
+# print(datetime.datetime.utcnow())  # 世界标准时间 2020-11-18 09:18:13.682717
+# print(datetime.datetime.now())  # 当地时间 2020-11-18 17:18:30.423067
+print(datetime.datetime.fromtimestamp(3000000))  # 将时间戳转换为datetime  1970-02-05 01:20:00
