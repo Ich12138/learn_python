@@ -22,3 +22,8 @@ import os
 # p341 os.path
 # 返回当前文件的绝对路径
 # print(os.path.abspath(__file__))
+
+# 切分文件路径
+# 根据不同系统切分方式不同
+# res = os.path.split(r'C:\\a\\b\\c\\d.txt')
+# print(res)  # ('C:\\\\a\\\\b\\\\c', 'd.txt')
