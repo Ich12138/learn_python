@@ -13,4 +13,8 @@ import os
 
 
 # 运行shell脚本或者python命令
-os.system(r'dir c:\\')
+# os.system(r'dir c:\\')
+
+# 环境变量
+# 规定key与value都必须为字符串
+# print(os.environ)
