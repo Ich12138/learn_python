@@ -18,3 +18,5 @@ import os
 # 环境变量
 # 规定key与value都必须为字符串
 # print(os.environ)
+
+# p341 os.path
