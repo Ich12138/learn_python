@@ -27,3 +27,9 @@ import os
 # 根据不同系统切分方式不同
 # res = os.path.split(r'C:\\a\\b\\c\\d.txt')
 # print(res)  # ('C:\\\\a\\\\b\\\\c', 'd.txt')
+
+# 获取文件夹名称
+print(os.path.dirname(r'C:\\a\\b\\c\\d.txt'))
+
+# 获取文件名称
+print(os.path.basename(r'C:\\a\\b\\c\\d.txt'))
