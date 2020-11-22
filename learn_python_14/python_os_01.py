@@ -20,3 +20,5 @@ import os
 # print(os.environ)
 
 # p341 os.path
+# 返回当前文件的绝对路径
+# print(os.path.abspath(__file__))
