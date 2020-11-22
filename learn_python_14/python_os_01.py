@@ -7,3 +7,10 @@ import os
 # 查看文件大小
 # size = os.path.getsize(r'F:\Jetbrains\PythonSoftWare\PythonProjects\learn_python\learn_python_14\ptyhon_random_01.py')
 # print(size)
+
+# 小作业: 统计指定文件夹的大小
+
+
+
+# 运行shell脚本或者python命令
+os.system(r'dir c:\\')
