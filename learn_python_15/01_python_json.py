@@ -8,3 +8,31 @@
 # 2、序列化用途
 #   1) 可用于存储
 #   2) 传输给其他平台使用
+
+# p349
+# 3、json模块的基本使用
+import json
+
+# 序列化
+# json_res = json.dumps([1, 'aaa', True, False, {"k1": 2, "k2": 'qwe'}])
+# print(json_res, type(json_res))  # [1, "aaa", true, false, {"k1": 2, "k2": "qwe"}] <class 'str'>
+# with open(r'./doc/test.txt', mode='wt', encoding='utf-8') as json_f:
+#     json_f.write(json_res)
+
+# 序列化的简单方法
+# with open(r'./doc/test.txt', mode='wt', encoding='utf-8') as json_f:
+#     json.dump([1, 'aaa', True, False, {"k1": 2, "k2": 'qwe'}], json_f)
+
+
+# 反序列化
+# with open('./doc/test.txt', mode='rt', encoding='utf-8') as re_json_f:
+#     res = re_json_f.read()
+#     re_json_res = json.loads('[1, "aaa", true, false, {"k1": 2, "k2": "qwe"}]')
+#     print(re_json_res, type(re_json_res))
+
+
+
+# 反序列化的简单方法
+# with open('./doc/test.txt', mode='rt', encoding='utf-8') as re_json_f:
+#     re_json_res = json.load(re_json_f)
+#     print(re_json_res, type(re_json_res))
