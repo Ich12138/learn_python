@@ -31,8 +31,15 @@ import json
 #     print(re_json_res, type(re_json_res))
 
 
-
 # 反序列化的简单方法
 # with open('./doc/test.txt', mode='rt', encoding='utf-8') as re_json_f:
 #     re_json_res = json.load(re_json_f)
 #     print(re_json_res, type(re_json_res))
+
+
+# p350
+# json格式的补充
+# json合适兼容的是所有语言通用的数据类型, 不能识别单一语言的所独有的类型
+# json.dumps({1, 2, 3, 4, 5})  # TypeError: Object of type set is not JSON serializable
+
+# json强调
