@@ -43,3 +43,6 @@ import json
 # json.dumps({1, 2, 3, 4, 5})  # TypeError: Object of type set is not JSON serializable
 
 # json强调
+
+# p351
+# 猴子补丁
