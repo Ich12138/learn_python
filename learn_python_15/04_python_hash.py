@@ -20,7 +20,31 @@ m = hashlib.md5()
 # 放入需要hash的原材料
 m.update("hello".encode('utf-8'))
 
-
 # 获取hash之后的值
 res = m.hexdigest()
 print(res)
+
+# p358 密码加盐
+
+# 模拟撞库
+# 抓包获取的加密密码
+cryptograph = 'aee949757a2e698417463d47acac93df'
+
+# 猜测的密码列表
+pwds = [
+    'alex3714',
+    'alex1313',
+    'alex94139413',
+    'alex123456',
+    '123456alex',
+    'a123lex',
+]
+dic = {}
+for pwd in pwds:
+    res = hashlib.md5(pwd.encode('utf-8'))
+    dic[pwd] = res.hexdigest()
+print(dic)
+
+for k, v in dic.items():
+    if v == cryptograph:
+        print("撞库成功, 明文密码为: {}".format(k))
