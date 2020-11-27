@@ -16,3 +16,11 @@ hash
 import hashlib
 
 m = hashlib.md5()
+
+# 放入需要hash的原材料
+m.update("hello".encode('utf-8'))
+
+
+# 获取hash之后的值
+res = m.hexdigest()
+print(res)
