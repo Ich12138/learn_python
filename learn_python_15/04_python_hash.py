@@ -48,3 +48,6 @@ print(dic)
 for k, v in dic.items():
     if v == cryptograph:
         print("撞库成功, 明文密码为: {}".format(k))
+
+
+# 提高安全性---->密码加盐
