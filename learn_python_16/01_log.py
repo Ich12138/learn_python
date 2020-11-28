@@ -27,5 +27,3 @@ logging.info('消息info')
 logging.warning('警告warn')
 logging.error('错误error')
 logging.critical('严重critical')
-
-# p363 日志格式与输出位置
