@@ -47,6 +47,7 @@ LOGGING_DIC = {
         },
     },
     'filters': {},
+    # 是日志的接收者, 不同的handler会将日志输出到不同的位置
     'handlers': {
         # 打印到终端的日志
         'console': {
@@ -75,6 +76,7 @@ LOGGING_DIC = {
             'encoding': 'utf-8',
         },
     },
+    # 日志的产生者, 产生的日志会传递给handler然后控制输出
     'loggers': {
         # logging.getLogger(__name__)拿到的logger配置
         '': {
