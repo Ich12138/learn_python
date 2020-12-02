@@ -42,3 +42,15 @@ class Student:
 
 # 访问函数属性
 # print(Student.set_info)  # <function Student.set_info at 0x015FC388>
+
+
+# p391 创造对象
+stu_obj1 = Student()
+stu_obj2 = Student()
+stu_obj3 = Student()
+
+
+stu_obj1.name = 'wq'  # stu_obj1.__dict__['name'] = 'wq'
+stu_obj1.age = 18  # stu_obj1.__dict__['age'] = 18
+stu_obj1.gender = 'male'  # stu_obj1.__dict__['gender'] = 'male'
+print(stu_obj1.__dict__)
