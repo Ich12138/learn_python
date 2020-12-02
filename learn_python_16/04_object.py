@@ -32,13 +32,13 @@ class Student:
     def set_info(stu_obj):
         print(stu_obj, 'set_info')
 
-    print("======>")
+    # print("======>")
 
 
 # 访问数据属性
-print(Student.__dict__['stu_school'])
-print(Student.stu_school)  # 本质就是 Student.__dict__['stu_school']
+# print(Student.__dict__['stu_school'])
+# print(Student.stu_school)  # 本质就是 Student.__dict__['stu_school']
 
 
 # 访问函数属性
-print(Student.set_info)  # <function Student.set_info at 0x015FC388>
+# print(Student.set_info)  # <function Student.set_info at 0x015FC388>
