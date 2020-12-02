@@ -14,3 +14,23 @@
 
 # p389 类与对象的介绍
 
+
+# p390 类的定义
+
+# 先定义类
+# 类是对象相似数据与功能的集合体
+# 所以类中最常见的是变量与函数的定义，但是类体中其实是可以包含任意其他代码的
+# 注意：类体代码是在类定义阶段就会立即执行，会产生类的名称空间
+class Student:
+    # 1、变量的定义
+    stu_school = 'liao shi hua'
+
+    # 2、功能的定义
+    def tell_stu_info(stu_obj):
+        print(stu_obj)
+
+    def set_info(stu_obj):
+        print(stu_obj, 'set_info')
+
+    print("======>")
+
