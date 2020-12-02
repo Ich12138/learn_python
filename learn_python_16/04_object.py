@@ -34,3 +34,7 @@ class Student:
 
     print("======>")
 
+
+# 访问数据属性
+print(Student.__dict__['stu_school'])
+print(Student.stu_school)  # 本质就是 Student.__dict__['stu_school']
