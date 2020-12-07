@@ -19,8 +19,8 @@ class School:
     def class_info(self):
         print('学校名称: {}, 学校地址: {}'.format(self.school_name, self.school_addr))
         print('班级: ')
-        for class_name in self.classes:
-            print(class_name)
+        for class_obj in self.classes:
+            class_obj.print_course_info()
         print('\n')
 
 
@@ -30,8 +30,8 @@ tute_school = School('天津职业技术师范大学', '天津市津南区大沽
 
 # 2、为学校开设班级
 # 辽宁石油化工大学 05班、15班
-lsh_school.related_class('辽宁石油化工大学 05班')
-lsh_school.related_class('辽宁石油化工大学 15班')
+# lsh_school.related_class('辽宁石油化工大学 05班')
+# lsh_school.related_class('辽宁石油化工大学 15班')
 
 # 天津职业技术师范大学 1班、2班
 tute_school.related_class('天津职业技术师范大学 1班')
@@ -66,3 +66,9 @@ lsh_class2.related_course('神经网路与人工智能')
 # print(lsh_class1.print_course_info())
 # print(lsh_class2.print_course_info())
 
+# p364 学校与班级建立联系
+lsh_school.related_class(lsh_class1)
+lsh_school.related_class(lsh_class2)
+
+# 打印学校、班级、课程信息
+lsh_school.class_info()
