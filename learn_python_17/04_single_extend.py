@@ -18,3 +18,22 @@
 # obj = Bar()
 # obj.f2()
 
+
+
+# 示范二   子类调用父类的方法
+class Foo:
+    def f1(self):
+        print('from Foo.f1')
+
+    def f2(self):
+        print('from Foo.f2')
+        Foo.f1(self)
+
+
+class Bar(Foo):
+    def f1(self):
+        print('from Bar.f1')
+
+
+obj = Bar()
+obj.f2()
