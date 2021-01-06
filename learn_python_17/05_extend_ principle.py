@@ -38,3 +38,47 @@ python会在MRO列表上从左到右开始查找基类,直到找到第一个匹�
 则参照属性查找的发起者(即obj)所处类D的MRO列表来依次检索，首先在类D中未找到，
 然后再B中找到方法test
 """
+
+# 二  如果多继承是非菱形继承下，python2与python3的属性查找顺序一样
+#       都是一个分支一个分支的找下去, 最后找到object
+
+#  举例
+class E:
+    def test(self):
+        print('from E')
+
+
+class F:
+    def test(self):
+        print('from F')
+
+
+class B(E):
+    def test(self):
+        print('from B')
+
+
+class C(F):
+    def test(self):
+        print('from C')
+
+
+class D:
+    def test(self):
+        print('from D')
+
+
+class A(B, C, D):
+    # def test(self):
+    #     print('from A')
+    pass
+
+
+print(A.mro())
+'''
+[<class '__main__.A'>, <class '__main__.B'>, <class '__main__.E'>, <class '__main__.C'>, <class '__main__.F'>, <class '__main__.D'>, <class 'object'>]
+'''
+
+obj = A()
+obj.test() # 结果为：from B
+# 可依次注释上述类中的方法test来进行验证
